@@ -15,7 +15,7 @@ module YamlDb
     end
 
     class Load < SerializationHelper::Load
-      def self.load_documents(io, truncate = true)
+      def self.load_stream(io, truncate = true)
         tables = {}
         curr_table = nil
         io.each do |line|

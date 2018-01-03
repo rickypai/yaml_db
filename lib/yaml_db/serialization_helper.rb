@@ -60,7 +60,7 @@ module YamlDb
     class Load
       def self.load(io, truncate = true)
         ActiveRecord::Base.connection.transaction do
-          load_documents(io, truncate)
+          load_stream(io, truncate)
         end
       end
 
